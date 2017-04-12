@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 16px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  border: 1px solid red; }
+
+.site-header {
+  background-color: #262322;
+  background-image: url("./img/header-bg-s.jpg");
+  background-size: cover; }
+
+.logo {
+  height: 114px;
+  width: 176px; }
+  .logo img {
+    height: 100%;
+    width: 100%; }
