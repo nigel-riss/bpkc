@@ -1,0 +1,27 @@
+{
+  "name": "bpkc",
+  "version": "1.0.0",
+  "description": "Baltic Project and Consult Center Site",
+  "main": "index.pug",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nigel-riss/bpkc.git"
+  },
+  "author": "Yuriy Kurenkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nigel-riss/bpkc/issues"
+  },
+  "homepage": "https://github.com/nigel-riss/bpkc#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-pug2": "0.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11",
+    "sass-module-importer": "^1.4.0"
+  }
+}

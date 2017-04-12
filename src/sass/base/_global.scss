@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    // typography
+    font-size: $baseFontSize;
+}
+
+body {
+    // box model
+    margin: 0;
+    padding: 0;
+
+    // typography
+    font-size: $baseFontSize;
+    border: 1px solid red;
+}
