@@ -1,0 +1,22 @@
+.hero {
+    // box model
+    // padding: 20px;
+
+    &__title {
+        // typography
+        color: #ffffff;
+        font-size: 1.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__welcome {
+        // typography
+        font-weight: 300;
+    }
+
+    &__text {
+        // typography
+        color: #ffffff;
+    }
+}

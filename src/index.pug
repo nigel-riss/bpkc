@@ -3,7 +3,9 @@ doctype html
 head
     meta(name="viewport",
         content="width=device-width, initial-scale=1")
-
+    //- link(href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic", rel="stylesheet")
+    //- link(href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=cyrillic", rel="stylesheet")
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500&amp;subset=cyrillic" rel="stylesheet">
     link(rel="stylesheet", href="styles.css")
 
 body
@@ -46,12 +48,7 @@ body
             +service-item("Экология", "Программы и проекты по охране окружающей среды ", "./img/icons/")
 
     section.news
-        header.news__header
-            h2.news__title Новости
-            p.news__subtitle Актуальные новости развития энергосберегающих технологий и объектов использующих возобновляемые источники электроэнергии
-            a(href="#").news__link Все новости
-        .news__wrapper
-            mixin news-item(imgUrl, day, month, year, title, text)
+        mixin news-item(imgUrl, day, month, year, title, text)
                 article.news-item
                     .news-item__image: img(src=imgUrl)
                     header.news-item__header
@@ -62,14 +59,27 @@ body
                         .news-item__text= text
                         a(href="#").news-item__more Читать дальше...
 
-            +news-item("./img/news/photo.jpg", "01", "марта", "2017", "Профессиональный монтаж", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
-            +news-item("./img/news/photo.jpg", "07", "марта", "2017", "Профессиональный монтаж", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
-            +news-item("./img/news/photo.jpg", "26", "марта", "2017", "Профессиональный монтаж", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики. ")
+        header.news__header
+            h2.news__title Новости
+            p.news__subtitle Актуальные новости развития энергосберегающих технологий и объектов использующих возобновляемые источники электроэнергии
+            a(href="#").news__link Все новости
+        .news__wrapper
+            +news-item("./img/news/photo1.jpg", "01", "марта", "2017", "Профессиональный монтаж", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
+            +news-item("./img/news/photo2.jpg", "07", "марта", "2017", "Профессиональный монтаж", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
+            +news-item("./img/news/photo3.jpg", "26", "марта", "2017", "Профессиональный монтаж", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики. ")
     
     section.museum
+        mixin news-simple(imgUrl, text)
+            article.news-simple
+                .news-simple__image: img(src=imgUrl)
+                .news-simple__text= text
+
         h2.museum__title Музей Балтийского моря
         .museum__hero
 
         .museum__news
+            +news-simple("./img/news/photo1.jpg", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
+            +news-simple("./img/news/photo2.jpg", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
+            +news-simple("./img/news/photo3.jpg", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
 
     footer.site-footer
