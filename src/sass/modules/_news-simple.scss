@@ -2,6 +2,18 @@
     // box model
     margin-bottom: 40px;
 
+    // typography
+    font-size: 0;
+
+    @include atTabletsLandscape {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+
+        width: 31.2%;
+        margin-top: 0;
+    }
+
     &__image {
         // box model
         width: 100%;
@@ -11,11 +23,38 @@
             // box model
             width: 100%;
         }
+
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: 320px;
+        }
+
+        @include atTabletsLandscape {
+            // box model
+            display: block;
+            width: 100%;
+        }
     }
 
     &__text {
         // typography
         font-size: 1.5rem;
         font-weight: 300;
+
+        @include atTabletsPortrait {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 320px);
+            padding-left: 25px;
+        }
+
+        @include atTabletsLandscape {
+            // box model
+            display: block;
+            width: auto;
+        }
     }
 }

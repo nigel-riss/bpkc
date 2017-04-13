@@ -1,0 +1,29 @@
+.social {
+    // box model
+    margin-bottom: 50px;
+
+    &__title {
+        // box model
+        margin: 1em 0;
+
+        // typography
+        color: $orange;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    a {
+        // box model
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        margin-right: 20px;
+
+        img {
+            // box model
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

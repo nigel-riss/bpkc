@@ -1,0 +1,9 @@
+.wrapper {
+    // box model
+    margin: 0 auto;
+    
+    @include atDesktop {
+        // box model
+        width: 1100px;
+    }
+}

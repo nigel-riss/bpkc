@@ -44,20 +44,21 @@ body
             a(href="#").service-link Наши проекты
         .services__wrapper
             +service-item("Экология", "Программы и проекты по охране окружающей среды ", "./img/icons/ecology.svg")
-        a(href="#").button Все направления
+        a(href="#").services__all Все направления
 
     section.news
         mixin news-item(imgUrl, day, month, year, title, text)
                 //- article.news-item&attributes(attributes)= name
                 article.news-item(class!=attributes.class)
                     .news-item__image: img(src=imgUrl)
-                    header.news-item__header
-                        .news-item__day= day
-                        .news-item__date= month + ", " + year
-                    .news-item__content
-                        h3.news-item__title= title
-                        .news-item__text= text
-                    a(href="#").news-item__more Читать далее
+                    .news-item__text-wrapper
+                        header.news-item__header
+                            .news-item__day= day
+                            .news-item__date= month + ", " + year
+                        .news-item__content
+                            h3.news-item__title= title
+                            .news-item__text= text
+                        a(href="#").news-item__more Читать далее
 
         header.news__header
             h2.news__title Новости
@@ -75,16 +76,18 @@ body
             article.news-simple
                 .news-simple__image: img(src=imgUrl)
                 .news-simple__text= text
-
-        h2.museum__title Музей Балтийского Моря
+        .museum__wrapper
+            h2.museum__title Музей Балтийского Моря
         .museum__hero.museum-hero
-            .museum-hero__header
-                h2.museum-hero__title Baltic Sea Museum
-                p.museum-hero__text Проект, реализуемый в рамках Баренцево-Балтийской программы «Человек и Море» при поддержке «Коалиции Чистая Балтика»
-            +news-item("./img/news/photo3.jpg", "26", "марта", "2017", "Профессиональный монтаж", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики. ")(class= "news-item--museum")
+            .museum__wrapper
+                .museum-hero__header
+                    h2.museum-hero__title Baltic Sea Museum
+                    p.museum-hero__text Проект, реализуемый в рамках Баренцево-Балтийской программы «Человек и Море» при поддержке «Коалиции Чистая Балтика»
+                    a(href="#").museum-hero__link О проекте
+                +news-item("./img/news/photo3.jpg", "26", "марта", "2017", "Профессиональный монтаж", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики. ")(class= "news-item--museum")
         .museum__news
             +news-simple("./img/news/photo1.jpg", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
             +news-simple("./img/news/photo2.jpg", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
             +news-simple("./img/news/photo3.jpg", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
 
-    footer.site-footer
+    include includes/_footer.pug

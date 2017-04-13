@@ -15,6 +15,11 @@
             // box model
             width: 100%;
         }
+
+        @include atDesktop {
+            // box model
+            width: 55px;
+        }
     }
 
     &__title {
@@ -27,6 +32,15 @@
         font-size: 1.75rem;
         font-weight: 400;
         text-transform: uppercase;
+
+        @include atDesktop {
+            // box model
+            padding-left: 70px;
+
+            // typography
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
     }
 
     &__text {
@@ -35,8 +49,18 @@
         margin-top: 0;
 
         // typography
+        color: #212121;
         font-size: 1.25rem;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 1.5;
+
+        @include atDesktop {
+            // box model
+            padding-left: 70px;
+
+            // typography
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
     }
 }

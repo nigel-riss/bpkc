@@ -7,6 +7,7 @@
 @import "base/global";
 
 // modules
+@import "modules/wrapper";
 @import "modules/site-header";
 @import "modules/logo";
 @import "modules/main-nav";
@@ -19,3 +20,7 @@
 @import "modules/museum";
 @import "modules/museum-hero";
 @import "modules/news-simple";
+@import "modules/site-footer";
+@import "modules/social";
+@import "modules/copyrights";
+@import "modules/button";

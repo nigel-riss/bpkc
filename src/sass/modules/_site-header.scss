@@ -1,4 +1,7 @@
 .site-header {
+    // positioning
+    position: relative;
+
     // box model
     padding: 20px;
     
@@ -7,4 +10,36 @@
     background-image: url('./img/header-bg-s.jpg');
     background-position: center center; 
     background-size: cover;
+
+    @include atTabletsLandscape {
+        // box model
+        padding-bottom: 80px;
+    }
+
+    @include atDesktop {
+        // box model
+        padding: 40px 80px;
+        margin: 0 100px;
+
+        // visual
+        box-shadow: 0 0 20px rgba(#212121, 0.7);
+        background-image: url('./img/header-bg-l.jpg');
+
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            // box model
+            height: 100%;
+            width: 30px;
+            
+            // visual
+            background-color: #f49349;
+            background-image: linear-gradient(to top, #db7045, #f79549);
+        }
+    }
 }

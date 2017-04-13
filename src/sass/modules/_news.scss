@@ -1,6 +1,21 @@
 .news {
+    // positioning
+    position: relative;
+    z-index: 2;
+
     // box model
     padding: 20px;
+
+    @include atDesktop {
+        // box model
+        margin: 0 100px; 
+    }
+
+    @include atDesktopLarge {
+        // box model
+        margin: 0 auto;
+        max-width: 1400px;
+    }
 
     &__header {
         // positioning
@@ -25,6 +40,17 @@
             // visual
             background-color: $blue;
         }
+
+        @include atTabletsLandscape {
+            // box model
+            margin-left: 50px;
+        }
+
+        @include atDesktop {
+            // box model
+            width: 400px;
+            margin-top: -240px;
+        }
     }
 
     &__title {
@@ -46,5 +72,81 @@
         font-size: 1.25rem;
         font-weight: 300;
         line-height: 1.5;
+    }
+
+    &__link {
+        // positioning
+        position: relative;
+
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px 20px;
+        padding-bottom: 13px;
+        padding-right: 60px;
+
+        // typography
+        color: #ffffff;
+        font-size: 1.5em;
+        font-weight: 300;
+        line-height: 1;
+        text-decoration: none;
+
+        // visual
+        background-color: $blue;
+        border-radius: 25px;
+        transition: all 0.3s ease-out;
+
+        @include atTabletsLandscape {
+            // box model
+            margin-left: 50px;
+        }
+
+        &::before {
+            content: ">";
+
+            // positioning
+            position:absolute;
+            right: 20px;
+            top: 12px;
+
+            // box model
+            height: 24px;
+            width: 24px;
+            padding-left: 8px;
+
+            // typography
+            color: $blue;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 19px;
+
+            // visual
+            background-color: #ffffff;
+            border-radius: 50%;
+            transition: all 0.3s ease-out;
+        }
+
+        &:hover {
+            // visual
+            // opacity: 0.7;
+            background-color: $orange;
+
+            &::before {
+                // typography
+                color: $orange;
+            }
+        }
+    }
+
+    &__wrapper {
+        @include atTabletsLandscape {
+            // box model
+            padding: 0 30px;
+            padding-left: 50px;
+
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }

@@ -7,6 +7,17 @@
     // visual
     border-left: 3px solid $orange;
 
+    @include atTabletsLandscape {
+        // box model
+        width: 60%;
+        margin-left: 50px;
+    }
+
+    @include atDesktop {
+        // box model
+        max-width: 600px;
+    }
+
     &__title {
         // typography
         color: #ffffff;
@@ -14,6 +25,11 @@
         font-size: 1.5rem;
         font-weight: 500;
         text-transform: uppercase;
+        
+        @include atTabletsLandscape {
+            // typography
+            font-size: 2.25rem;
+        }
     }
 
     &__welcome {
@@ -29,5 +45,10 @@
         color: #ffffff;
         font-size: 1.25rem;
         font-weight: 300;
+
+        @include atTabletsLandscape {
+            // typography
+            font-size: 1.5rem;
+        }
     }
 }

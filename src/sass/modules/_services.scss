@@ -1,17 +1,63 @@
 .services {
+    // positioning
+    position: relative;
+
     // box model
     padding: 20px;
     padding-bottom: 80px;
 
+    // typography
+    // font-size: 0;
+
     // visual
     background-color: #f49349;
     background-image: linear-gradient(to right, #db7045, #f79549);
+
+    @include atTabletsLandscape {
+        // box model
+        margin: 0 50px;
+        margin-top: -50px;
+    }
+
+    @include atDesktop {
+        // box model
+        width: 50%;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: -120px;
+        padding-bottom: 0;
+        
+        // visual
+        opacity: 0.9;
+
+        &::after {
+            content: "";
+
+            // box model
+            display: table;
+            width: 100%;
+            clear: both;
+        }
+    }
+
+    @include atDesktopLarge {
+        // box model
+        margin-top: -200px;
+        max-width: 800px;
+    }
 
     &__wrapper {
         // box model
         display: block;
         margin-bottom: 30px;
         padding: 0;
+
+        @include atTabletsPortrait {
+            // box model
+            width: 48%;
+            padding-left: 20px;
+            float: left;
+        }
     }
 
     &__title {
@@ -27,6 +73,10 @@
         font-weight: 400;
         line-height: 1.2;
         text-transform: uppercase;
+
+        @include atDesktop {
+            font-size: 1.75rem;
+        }
 
         &::before {
             content: "";
@@ -45,4 +95,70 @@
         }
     }
 
+    &__all {
+        // positioning
+        position: relative;
+
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px 20px;
+        padding-bottom: 13px;
+        padding-right: 60px;
+
+        // typography
+        color: #ffffff;
+        font-size: 1.25em;
+        font-weight: 300;
+        line-height: 1;
+        text-decoration: none;
+
+        // visual
+        border: 2px solid #ffffff;
+        border-radius: 25px;
+        transition: all 0.3s ease-out;
+
+        &::before {
+            content: ">";
+
+            // positioning
+            position:absolute;
+            right: 20px;
+            top: 12px;
+
+            // box model
+            height: 24px;
+            width: 24px;
+            padding-left: 8px;
+
+            // typography
+            color: $orange;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 19px;
+
+            // visual
+            background-color: #ffffff;
+            border-radius: 50%;
+            transition: all 0.3s ease-out;
+        }
+
+        &:hover {
+            // visual
+            background-color: $blue;
+            border-color: $blue;
+
+            &::before {
+                // typography
+                color: $blue;
+            }
+        }
+    
+        @include atDesktop {
+            // positioning
+            position: absolute;
+            top: 35px;
+            right: 40px;
+        }
+    }
 }

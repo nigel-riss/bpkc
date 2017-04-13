@@ -1,0 +1,12 @@
+.copyrights {
+    // typography
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &--orange {
+        // typography
+        color: $orange;
+    }
+}

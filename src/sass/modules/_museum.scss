@@ -1,6 +1,24 @@
 .museum {
     // box model
 
+    &__wrapper {
+        @include atTabletsLandscape {
+            // box model
+            margin: 0 50px;
+        }
+
+        @include atDesktop {
+            // box model
+            margin: 0 100px;
+        }
+
+        @include atDesktopLarge {
+            // box model
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+    }
+
     &__title {
         // positioning
         position: relative;
@@ -31,6 +49,10 @@
             // visual
             background-color: $blue;
         }
+
+        @include atDesktopLarge {
+            margin: 5px 0;
+        }
     }
 
     &__hero {
@@ -41,5 +63,21 @@
     &__news {
         // box model
         padding: 20px;
+
+        @include atTabletsLandscape {
+            // box model
+            padding: 0 30px;
+            padding-left: 50px;
+            padding-top: 40px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @include atDesktopLarge {
+            // box model
+            max-width: 1400px;
+            margin: 0 auto;
+        }
     }
 }

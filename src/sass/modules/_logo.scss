@@ -8,4 +8,10 @@
         height: 100%;
         width: 100%;
     }
+
+    @include atDesktop {
+        // box model
+        height: 142.5px;
+        width: 220px;
+    }
 }
