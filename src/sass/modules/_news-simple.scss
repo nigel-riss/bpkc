@@ -1,0 +1,21 @@
+.news-simple {
+    // box model
+    margin-bottom: 40px;
+
+    &__image {
+        // box model
+        width: 100%;
+        margin-bottom: 20px;
+
+        img {
+            // box model
+            width: 100%;
+        }
+    }
+
+    &__text {
+        // typography
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+}

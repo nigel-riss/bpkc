@@ -1,0 +1,45 @@
+.museum {
+    // box model
+
+    &__title {
+        // positioning
+        position: relative;
+
+        // box model
+        margin: 5px 20px;
+        padding: 0 25px;
+
+        // typography
+        color: $blue;
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 1.4;
+        text-transform: uppercase;
+
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 0;
+            top: 14px;
+
+            // box model
+            height: calc(100%);
+            width: 3px;
+
+            // visual
+            background-color: $blue;
+        }
+    }
+
+    &__hero {
+        // visual
+        background-color: #336276;
+    }
+
+    &__news {
+        // box model
+        padding: 20px;
+    }
+}

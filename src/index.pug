@@ -3,9 +3,6 @@ doctype html
 head
     meta(name="viewport",
         content="width=device-width, initial-scale=1")
-    //- link(href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic", rel="stylesheet")
-    //- link(href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=cyrillic", rel="stylesheet")
-    //- <link href="//fonts.googleapis.com/css?family=Oswald:300,400,500&amp;subset=cyrillic" rel="stylesheet">
     link(rel="stylesheet", href="styles.css")
 
 body
@@ -25,44 +22,49 @@ body
 
         .hero
             h1.hero__title.
-                #[span.hero__welcome Добро пожаловать в] Балтийский проектно-консалтинговый центр
+                #[span.hero__welcome Добро пожаловать в] #[br] Балтийский проектно-консалтинговый центр
             p.hero__text Основными направлениями нашей работы являются: проектирование, поставка, монтаж и мониторинг систем, обеспечивающих объекты энергией и комфортным микроклиматом.
             a(href="#").button Подробнее
     
     section.services
-        h2.services__title
+        h2.services__title Направления работы
         mixin service-item(title, text, iconUrl)
             article.service-item
                 .service-item__icon: img(src=iconUrl, alt=title)
                 h3.service-item__title= title
-                p.servise-item__text= text
+                p.service-item__text= text
+
         .services__wrapper
-            +service-item("Проектирование и консалтинг", "Оказание услуг по сопровождению проектов в сфере:", "./img/icons/")
+            +service-item("Проектирование и консалтинг", "Оказание услуг по сопровождению проектов в сфере:", "./img/icons/project.svg")
             - var links = ["Переработка отходов", "Возобновляемые источники энергии", "Водоочистка", "Повышение энергоэффективности"]
             - for (var i = 0; i < 4; i++)
                 a(href="#").service-link= links[i]
         .services__wrapper
-            +service-item("Международная деятельность", "Участие в международных проектах, организация профильных мероприятий", "./img/icons/")
+            +service-item("Международная деятельность", "Участие в международных проектах, организация профильных мероприятий", "./img/icons/inter.svg")
             a(href="#").service-link Наши проекты
         .services__wrapper
-            +service-item("Экология", "Программы и проекты по охране окружающей среды ", "./img/icons/")
+            +service-item("Экология", "Программы и проекты по охране окружающей среды ", "./img/icons/ecology.svg")
+        a(href="#").button Все направления
 
     section.news
         mixin news-item(imgUrl, day, month, year, title, text)
-                article.news-item
+                //- article.news-item&attributes(attributes)= name
+                article.news-item(class!=attributes.class)
                     .news-item__image: img(src=imgUrl)
                     header.news-item__header
                         .news-item__day= day
                         .news-item__date= month + ", " + year
-                        h3.news-item__title= title
                     .news-item__content
+                        h3.news-item__title= title
                         .news-item__text= text
-                        a(href="#").news-item__more Читать дальше...
+                    a(href="#").news-item__more Читать далее
 
         header.news__header
             h2.news__title Новости
             p.news__subtitle Актуальные новости развития энергосберегающих технологий и объектов использующих возобновляемые источники электроэнергии
-            a(href="#").news__link Все новости
+
+        a(href="#").news__link Все новости
+
         .news__wrapper
             +news-item("./img/news/photo1.jpg", "01", "марта", "2017", "Профессиональный монтаж", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
             +news-item("./img/news/photo2.jpg", "07", "марта", "2017", "Профессиональный монтаж", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
@@ -74,9 +76,12 @@ body
                 .news-simple__image: img(src=imgUrl)
                 .news-simple__text= text
 
-        h2.museum__title Музей Балтийского моря
-        .museum__hero
-
+        h2.museum__title Музей Балтийского Моря
+        .museum__hero.museum-hero
+            .museum-hero__header
+                h2.museum-hero__title Baltic Sea Museum
+                p.museum-hero__text Проект, реализуемый в рамках Баренцево-Балтийской программы «Человек и Море» при поддержке «Коалиции Чистая Балтика»
+            +news-item("./img/news/photo3.jpg", "26", "марта", "2017", "Профессиональный монтаж", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики. ")(class= "news-item--museum")
         .museum__news
             +news-simple("./img/news/photo1.jpg", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")
             +news-simple("./img/news/photo2.jpg", "Все тонкости и секреты установки солнечных панелей в нашей статье, их которой немало нового смогут узнать даже опытные электрики.")

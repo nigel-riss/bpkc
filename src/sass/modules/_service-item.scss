@@ -1,0 +1,42 @@
+.service-item {
+    // positioning
+    position: relative;
+
+    &__icon {
+        // positioning
+        position: absolute;
+        left: 0;
+        top: 10px;
+
+        // box model
+        width: 65px;
+
+        img {
+            // box model
+            width: 100%;
+        }
+    }
+
+    &__title {
+        // box model
+        padding-left: 80px;
+        margin: 0;
+
+        // typography
+        color: #ffffff;
+        font-size: 1.75rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        // box model
+        padding-left: 80px;
+        margin-top: 0;
+
+        // typography
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+}

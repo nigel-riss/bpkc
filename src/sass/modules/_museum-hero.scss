@@ -1,17 +1,16 @@
-.services {
+.museum-hero {
     // box model
     padding: 20px;
-    padding-bottom: 80px;
 
     // visual
-    background-color: #f49349;
-    background-image: linear-gradient(to right, #db7045, #f79549);
+    background-image: url('./img/museum-bg-s.jpg');
+    background-position: center center;
+    background-size: cover;
 
-    &__wrapper {
+    &__header {
         // box model
-        display: block;
-        margin-bottom: 30px;
-        padding: 0;
+        margin-top: -10px;
+        padding-left: 25px;
     }
 
     &__title {
@@ -19,13 +18,13 @@
         position: relative;
 
         // box model
-        padding-left: 25px;
+        margin: 0;
 
         // typography
         color: #ffffff;
         font-size: 2.5rem;
         font-weight: 400;
-        line-height: 1.2;
+        line-height: 1.4;
         text-transform: uppercase;
 
         &::before {
@@ -33,16 +32,22 @@
 
             // positioning
             position: absolute;
-            bottom: 0.1em;
-            left: 0;
+            bottom: 10px;
+            left: -25px;
 
             // box model
-            height: calc(100% + 80px);
+            height: calc(100% + 20px);
             width: 3px;
 
             // visual
-            background-color: #ffffff;
+            background-color: $blue;
         }
     }
 
+    &__text {
+        // typography
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
 }
