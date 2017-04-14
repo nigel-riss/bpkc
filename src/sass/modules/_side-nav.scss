@@ -1,0 +1,56 @@
+.side-nav {
+    // box model
+    margin: 20px;
+    margin-bottom: 80px;
+    padding: 40px 20px;
+
+    // visual
+    border: 3px solid $orange;
+
+    @include atTabletsLandscape {
+        // box model
+        margin: 50px;
+        margin-left: 70px;
+    }
+
+    @include atDesktop {
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        margin-top: 60px;
+        width: 280px;
+    }
+
+    &__list {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // visual
+        list-style: none;
+    }
+
+    &__item {
+        // typography
+        font-size: 1.5rem;
+        line-height: 2;
+        text-transform: uppercase;
+
+        span {
+            // typography
+            color: $orange;
+        }
+
+        a {
+            // typography
+            color: $copy;
+            text-decoration: none;
+
+            &:hover {
+                // visual
+                opacity: 0.8;
+            }
+        }
+    }
+}

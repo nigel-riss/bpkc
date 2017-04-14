@@ -1,0 +1,10 @@
+.simple-news {
+    @include atTabletsLandscape {
+        // box model
+        padding: 0 30px;
+        padding-left: 50px;
+
+        display: flex;
+        justify-content: space-between;
+    }
+}

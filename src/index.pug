@@ -1,6 +1,7 @@
 doctype html
 
 head
+    meta(charset="UTF-8")
     meta(name="viewport",
         content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="styles.css")
@@ -24,7 +25,7 @@ body
             h1.hero__title.
                 #[span.hero__welcome Добро пожаловать в] #[br] Балтийский проектно-консалтинговый центр
             p.hero__text Основными направлениями нашей работы являются: проектирование, поставка, монтаж и мониторинг систем, обеспечивающих объекты энергией и комфортным микроклиматом.
-            a(href="#").button Подробнее
+            a(href="about.html").button Подробнее
     
     section.services
         h2.services__title Направления работы
@@ -34,7 +35,7 @@ body
                 h3.service-item__title= title
                 p.service-item__text= text
 
-        .services__wrapper
+        .services__`
             +service-item("Проектирование и консалтинг", "Оказание услуг по сопровождению проектов в сфере:", "./img/icons/project.svg")
             - var links = ["Переработка отходов", "Возобновляемые источники энергии", "Водоочистка", "Повышение энергоэффективности"]
             - for (var i = 0; i < 4; i++)
