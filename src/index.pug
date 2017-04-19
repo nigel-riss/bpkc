@@ -2,6 +2,7 @@ doctype html
 
 head
     meta(charset="UTF-8")
+    title Балтийский Проектно-Консалтинговый Центр
     meta(name="viewport",
         content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="styles.css")
@@ -35,7 +36,7 @@ body
                 h3.service-item__title= title
                 p.service-item__text= text
 
-        .services__`
+        .services__wrapper
             +service-item("Проектирование и консалтинг", "Оказание услуг по сопровождению проектов в сфере:", "./img/icons/project.svg")
             - var links = ["Переработка отходов", "Возобновляемые источники энергии", "Водоочистка", "Повышение энергоэффективности"]
             - for (var i = 0; i < 4; i++)
