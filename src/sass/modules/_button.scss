@@ -22,17 +22,16 @@
     transition: all 0.3s ease-out;
 
     &::before {
-        content: ">";
+        content: "";
 
         // positioning
         position:absolute;
         right: 20px;
-        top: 12px;
+        top: 11px;
 
         // box model
         height: 24px;
         width: 24px;
-        padding-left: 8px;
 
         // typography
         color: $orange;
@@ -41,8 +40,9 @@
         line-height: 19px;
 
         // visual
-        background-color: #ffffff;
-        border-radius: 50%;
+        // background-color: #ffffff;
+        // border-radius: 50%;
+        background-image: url('./img/icons/arrow.svg');
         transition: all 0.3s ease-out;
     }
 

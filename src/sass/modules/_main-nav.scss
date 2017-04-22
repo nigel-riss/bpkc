@@ -1,5 +1,68 @@
 .main-nav {
+    // positioning
+    position: absolute;
+    left: 30px;
+    right: 0;
+    top: 100px;
+    
     // box model
-    display: none;
-    visibility: hidden;
+    // width: 100%;
+
+    // visual
+    background-color: rgba(#ffffff, 0.3);
+    // box model
+    // display: none;
+    // visibility: hidden;
+
+    &__menu {
+        // box model
+        margin: 0;
+        padding: 20px 0;
+
+        // typography
+        font-size: 0;
+        text-align: right;
+
+        // visual
+        list-style: none;
+
+        @include atTabletsLandscape {
+            // box model
+        }
+
+        @include atDesktop {
+            // box model
+            padding: 30px 0;
+            padding-right: 100px;
+        }
+    }
+
+    li {
+        // box model
+        margin: 0;
+        padding: 0;
+        // border: 1px solid red;
+
+        @include atTabletsLandscape {
+            // box model
+            display: inline-block;
+        }
+    }
+
+    a {
+        // border: 1px solid red;
+        // box model
+        padding: 0 20px;
+
+        // typography
+        color: #ffffff;
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            // typography
+            color: $orange;
+        }
+    }
 }

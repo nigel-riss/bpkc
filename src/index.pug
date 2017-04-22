@@ -5,6 +5,7 @@ head
     title Балтийский Проектно-Консалтинговый Центр
     meta(name="viewport",
         content="width=device-width, initial-scale=1")
+    link(href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic", rel="stylesheet")
     link(rel="stylesheet", href="styles.css")
 
 body
@@ -16,7 +17,7 @@ body
         
         .logo: img(src="./img/logo.png")
 
-        nav.main-nav: ul
+        nav.main-nav: ul.main-nav__menu
             - var list = ["О компании", "Новости", "Проекты", "Партнеры", "Сотрудники", "Вакансии", "Контакты"];
             - for (var i = 0; i < 7; i++)
                 li

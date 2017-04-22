@@ -3,102 +3,6 @@ Theme Name: Baltic Project Design and Consulting Center
 Description: Special theme for bpdcc.org
 Author: Yuriy Kurenkov
 */
-/* cyrillic */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Oswald Light"), local("Oswald-Light"), url(https://fonts.gstatic.com/s/oswald/v13/WDQRONh0ieLkzMd4njMkJBJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
-
-/* vietnamese */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Oswald Light"), local("Oswald-Light"), url(https://fonts.gstatic.com/s/oswald/v13/qlwg-kjAsZDGqOniRm96VBJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
-  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
-
-/* latin-ext */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Oswald Light"), local("Oswald-Light"), url(https://fonts.gstatic.com/s/oswald/v13/l1cOQ90roY9yC7voEhngDBJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
-
-/* latin */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Oswald Light"), local("Oswald-Light"), url(https://fonts.gstatic.com/s/oswald/v13/HqHm7BVC_nzzTui2lzQTDVtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
-
-/* cyrillic */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Oswald Regular"), local("Oswald-Regular"), url(https://fonts.gstatic.com/s/oswald/v13/DgBpgaYycijFA8v2hNt7MfesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
-
-/* vietnamese */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Oswald Regular"), local("Oswald-Regular"), url(https://fonts.gstatic.com/s/oswald/v13/peRd8sj511qE2lHtK-QfcPesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
-  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
-
-/* latin-ext */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Oswald Regular"), local("Oswald-Regular"), url(https://fonts.gstatic.com/s/oswald/v13/yg0glPPxXUISnKUejCX4qfesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
-
-/* latin */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Oswald Regular"), local("Oswald-Regular"), url(https://fonts.gstatic.com/s/oswald/v13/pEobIV_lL25TKBpqVI_a2w.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
-
-/* cyrillic */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 500;
-  src: local("Oswald Medium"), local("Oswald-Medium"), url(https://fonts.gstatic.com/s/oswald/v13/K-jdLkejCoClkDPYLXieFBJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
-
-/* vietnamese */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 500;
-  src: local("Oswald Medium"), local("Oswald-Medium"), url(https://fonts.gstatic.com/s/oswald/v13/qEUKF1uIhQL23ybN9ZhoxBJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
-  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
-
-/* latin-ext */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 500;
-  src: local("Oswald Medium"), local("Oswald-Medium"), url(https://fonts.gstatic.com/s/oswald/v13/cgaIrkaP9Empe8_PwXbajBJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
-
-/* latin */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 500;
-  src: local("Oswald Medium"), local("Oswald-Medium"), url(https://fonts.gstatic.com/s/oswald/v13/KuTkTNzljLi-9-e4QiI83ltXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
-
 *,
 *::before,
 *::after {
@@ -110,7 +14,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
   background-color: #eef3fa; }
 
@@ -166,8 +70,35 @@ body {
       width: 220px; } }
 
 .main-nav {
-  display: none;
-  visibility: hidden; }
+  position: absolute;
+  left: 30px;
+  right: 0;
+  top: 100px;
+  background-color: rgba(255, 255, 255, 0.3); }
+  .main-nav__menu {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 0;
+    text-align: right;
+    list-style: none; }
+    @media (min-width: 1200px) {
+      .main-nav__menu {
+        padding: 30px 0;
+        padding-right: 100px; } }
+  .main-nav li {
+    margin: 0;
+    padding: 0; }
+    @media (min-width: 900px) {
+      .main-nav li {
+        display: inline-block; } }
+  .main-nav a {
+    padding: 0 20px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease-out; }
+    .main-nav a:hover {
+      color: #f79549; }
 
 .hero {
   margin: 50px 0;
@@ -183,7 +114,7 @@ body {
       max-width: 600px; } }
   .hero__title {
     color: #ffffff;
-    font-family: "Oswald", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
     text-transform: uppercase; }
@@ -830,19 +761,17 @@ body {
   border-radius: 25px;
   transition: all 0.3s ease-out; }
   .button::before {
-    content: ">";
+    content: "";
     position: absolute;
     right: 20px;
-    top: 12px;
+    top: 11px;
     height: 24px;
     width: 24px;
-    padding-left: 8px;
     color: #f79549;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 19px;
-    background-color: #ffffff;
-    border-radius: 50%;
+    background-image: url("./img/icons/arrow.svg");
     transition: all 0.3s ease-out; }
   .button:hover {
     background-color: #00a0e3;
